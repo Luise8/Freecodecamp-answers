@@ -26,7 +26,6 @@ body {
   width: 8%;
   height: 100px;
   display: flex;
-
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -75,7 +74,6 @@ a:hover {
 }
 
 #section-form h2 {
-  margin-top: 35px;
   margin-bottom: 18px;
 }
 
@@ -155,7 +153,7 @@ input:focus {
 .spaces {
   height: 100px;
 }
- #space_video_anchor {
+ .spaces_other_sections {
     margin-bottom: 140px;
     margin-top: -100px;
   }
@@ -231,7 +229,7 @@ input:focus {
   .spaces {
     height: 160px;
   }
-   #space_video_anchor {
+   .spaces_other_sections {
     margin-bottom: 210px;
     margin-top: -180px;
   }
@@ -276,11 +274,16 @@ input:focus {
   }
   #image_content {
     height: 70px;
+  
+  }
+  #header-img {
+  max-width: 90%;
+  height: auto;
   }
   .spaces {
     height: 70px;
   }
-  #space_video_anchor {
+  .spaces_other_sections {
     margin-bottom: 100px;
     margin-top: -70px;
   }
