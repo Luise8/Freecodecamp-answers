@@ -274,11 +274,10 @@ input:focus {
   }
   #image_content {
     height: 70px;
-  
   }
   #header-img {
-  max-width: 80%;
-  height: auto;
+  width: auto;
+  max-height: 100%;
   }
   .spaces {
     height: 70px;
