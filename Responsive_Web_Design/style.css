@@ -267,7 +267,7 @@ input:focus {
   }
 
 }
-@media (max-height: 425px) {
+@media (max-height: 425px, min-width: 425px) {
   #header {
     width: 100%;
     height: 70px;
@@ -277,7 +277,7 @@ input:focus {
   
   }
   #header-img {
-  max-width: 90%;
+  max-width: 80%;
   height: auto;
   }
   .spaces {
