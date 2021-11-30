@@ -267,7 +267,7 @@ input:focus {
   }
 
 }
-@media (max-height: 425px, min-width: 425px) {
+@media (max-height: 425px) and (orientation: landscape) {
   #header {
     width: 100%;
     height: 70px;
