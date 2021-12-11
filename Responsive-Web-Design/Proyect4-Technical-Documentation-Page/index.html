@@ -13,15 +13,22 @@
         <header>Array.prototype.reduce()</header>
         <ul>
           <li><a href="#introduction" class="nav-link">Introduction</a></li>
-          <li><a href="#titulo2" class="nav-link">titulo2</a></li>
-          <li><a href="#titulo3" class="nav-link">titulo3</a></li>
-          <li><a href="#titulo4" class="nav-link">titulo4</a></li>
-          <li><a href="#titulo5" class="nav-link">titulo5</a></li>
+          <li><a href="#syntax" class="nav-link">Syntax</a></li>
+          <li><a href="#description" class="nav-link">Description</a></li>
+          <li><a href="#examples" class="nav-link">Examples</a></li>
+          <li>
+            <a href="#more_information" class="nav-link">More information</a>
+          </li>
         </ul>
       </nav>
       <main id="main-doc">
         <section class="main-section" id="introduction">
           <header>Introduction</header>
+          <p>
+            This method is one of the most powerful for arrays. Its magic is so
+            much that it can even replicate to other methods, for example map(),
+            filter()), among others.
+          </p>
           <p>
             The reduce() method executes a user-supplied “reducer” callback
             function on each element of the array, in order, passing in the
@@ -37,148 +44,164 @@
             0).
           </p>
         </section>
-        <section class="main-section" id="titulo2">
-          <header>titulo2</header>
+        <section class="main-section" id="syntax">
+          <header>Syntax</header>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            explicabo nihil eveniet eum consequuntur! Eaque blanditiis beatae
-            aperiam temporibus aliquam quos, dolor adipisci! Quas quidem
-            accusantium dignissimos odio iure earum optio asperiores obcaecati,
-            consectetur amet blanditiis rem commodi ipsam facilis nam,
-            cupiditate consequuntur doloremque eum facere dolore. Ipsam
-            assumenda laborum debitis, pariatur aliquam deleniti consequuntur
-            ipsum officiis officia facere, reiciendis voluptas? Ducimus
-            repellendus voluptas omnis ipsam quis, nemo a corporis pariatur fuga
-            veritatis tenetur nisi? Vel quod qui asperiores, sint odio quis
-            dolor ipsum dicta aliquid culpa quia omnis? Temporibus beatae a
-            voluptates quos! Accusamus possimus corrupti quis officiis minus.
+            This method has two parameters: a callback function (callbackFn) and
+            a initialValue (optional):
           </p>
           <p>
-            Cum itaque eligendi repellendus temporibus provident omnis quia
-            deserunt quas quasi debitis, fugiat, cupiditate numquam unde
-            quibusdam modi! Amet similique minus, architecto dolore autem
-            deleniti totam quidem hic at facilis commodi esse placeat? Quidem
-            facere provident, sit reprehenderit quia odit quisquam consequuntur
-            doloribus ea non molestias adipisci distinctio numquam et nulla
-            magnam repellendus tempore illo similique sed soluta fugit nesciunt
-            nostrum? Odit adipisci maiores quidem ea laborum? Amet, nam quod
-            sunt soluta at tenetur exercitationem suscipit asperiores ipsum a
-            voluptatum, rem excepturi id quas aliquid praesentium eveniet,
-            magnam labore incidunt explicabo ullam? Eligendi recusandae iste
-            voluptatem consectetur labore aut vero.
+            The <code>callbackFn</code> is a “reducer” function that takes four
+            arguments:
           </p>
-          <code></code>
           <ul class="sections">
-            <li></li>
-            <li></li>
+            <li>
+              <code>previousValue:</code> the value resulting from the previous
+              call to callbackFn. On first call, initialValue if specified,
+              otherwise the value of array[0].
+            </li>
+            <li>
+              <code>currentValue:</code> the value of the current element. On
+              first call, the value of array[0] if an initialValue was
+              specified, otherwise the value of array[1].
+            </li>
+            <li>
+              <code>currentIndex:</code> the index position of currentValue in
+              the array. On first call, 0 if initialValue was specified,
+              otherwise 1.
+            </li>
+            <li><code>array:</code>the array to traverse.</li>
           </ul>
+          <p>
+            Also this method can contain an <code>initialValue</code>, an
+            optional value to which previousValue is initialized the first time
+            the callback is called. If initialValue is specified, that also
+            causes currentValue to be initialized to the first value in the
+            array. If initialValue is not specified, previousValue is
+            initialized to the first value in the array, and currentValue is
+            initialized to the second value in the array.
+          </p>
+          <p>
+            The return is the value that results from running the “reducer”
+            callback function to completion over the entire array.
+          </p>
+          <p>The following are the syntaxes that can be adopted:</p>
+          <code
+            >// Arrow function<br />
+            reduce((previousValue, currentValue) => { ... } )<br />
+            reduce((previousValue, currentValue, currentIndex) => { ... } )
+            <br />
+            reduce((previousValue, currentValue, currentIndex, array) => { ... }
+            )<br />
+            reduce((previousValue, currentValue, currentIndex, array) => { ...
+            }, initialValue)</code
+          >
+          <br />
+          <code
+            >// Callback function <br />
+            reduce(callbackFn) <br />
+            reduce(callbackFn, initialValue)</code
+          >
+          <code>
+            <br />
+            // Inline callback function <br />
+            reduce(function(previousValue, currentValue) { ... }) <br />
+            reduce(function(previousValue, currentValue, currentIndex) { ... })
+            <br />
+            reduce(function(previousValue, currentValue, currentIndex, array) {
+            ... }) <br />
+            reduce(function(previousValue, currentValue, currentIndex, array) {
+            ... }, initialValue)</code
+          >
         </section>
-        <section class="main-section" id="titulo3">
-          <header>titulo3</header>
+        <section class="main-section" id="description">
+          <header>Description</header>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus nulla molestias inventore voluptatum nisi perspiciatis
-            corrupti distinctio odit veniam, unde culpa nesciunt illum iste
-            possimus sapiente? Possimus voluptatum saepe iusto aperiam deleniti
-            nisi, cumque ipsa inventore officia amet ut veritatis ea voluptates
-            earum. Voluptas exercitationem non iusto nulla eius temporibus,
-            repellat eligendi, ea magni expedita minima. Est, enim magnam.
-            Fugiat excepturi minus explicabo repellat quaerat dignissimos
-            accusantium obcaecati ad, enim ipsum aut cupiditate sit? Error
-            suscipit vel saepe repellat dignissimos quo. Neque porro quae atque
-            amet eveniet perspiciatis repellat delectus aperiam libero. Soluta
-            dolor eum ipsam beatae delectus iste quis?
+            The ECMAScript specification describes that upon reduce() that the
+            <code>callbackfn</code> should be a function that has four arguments
+            (<a href="#syntax">mentioned in the syntax section</a>) . Reduce
+            calls the callback, as a function, once for each element after the
+            first element present in the array, in ascending order.
           </p>
           <p>
-            Obcaecati quos laborum ipsa iste architecto necessitatibus autem
-            iusto, eaque laudantium, beatae veritatis asperiores delectus aut
-            vero a deserunt modi et saepe corrupti omnis consectetur similique!
-            Pariatur quisquam cupiditate aut sunt? Quia eius incidunt voluptatum
-            adipisci omnis aliquam, earum tempora dicta dolor, sapiente iusto
-            rem corrupti amet laborum exercitationem. Quia enim animi fugiat
-            assumenda asperiores modi ipsum qui corrupti praesentium nostrum.
-            In, numquam quis nisi asperiores temporibus ipsam ratione sunt velit
-            recusandae quibusdam magnam nesciunt nobis molestias amet harum.
-            Culpa, veritatis doloribus laborum cumque dolorem ea numquam tempore
-            asperiores vero soluta minima! Officia, ducimus ipsam! Placeat
-            officiis illo perferendis explicabo?
+            The first time that callback is called, the previousValue and
+            currentValue can be one of two values:
           </p>
-          <code></code>
           <ul class="sections">
-            <li></li>
-            <li></li>
+            <li>
+              If an <code>initialValue</code> was supplied in the call to
+              reduce, then previousValue will be equal to initialValue and
+              currentValue will be equal to the first value in the array.
+            </li>
+            <li>
+              If no <code>initialValue</code> was supplied, then previousValue
+              will be equal to the first value in the array and currentValue
+              will be equal to the second.
+            </li>
           </ul>
+          <p>
+            It is a TypeError if the array contains no elements and
+            <code>initialValue</code>
+            is not provided.
+          </p>
+          <p>
+            If the array only has one element (regardless of position) and no
+            <code>initialValue</code> is provided, or if
+            <code>initialValue</code> is provided but the array is empty, the
+            solo value will be returned without calling callbackFn.
+          </p>
+          <p>
+            If <code>initialValue</code> is provided and the array is not empty,
+            then the reduce method will always invoke the callback function
+            starting at index 0.
+          </p>
         </section>
-        <section class="main-section" id="titulo4">
-          <header>titulo4</header>
+        <section class="main-section" id="examples">
+          <header>Examples</header>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
-            laudantium quam ducimus ea illum est itaque dolores id aperiam iure
-            qui aliquam facere, saepe molestiae ipsum ullam velit cupiditate
-            magni recusandae tenetur odit debitis placeat? Ad laborum,
-            asperiores totam aperiam libero ex quaerat cupiditate, cumque
-            doloremque harum et eaque itaque mollitia deserunt vero quos
-            necessitatibus, non illo sapiente! Aliquid nisi error voluptatibus
-            fugit? Voluptatibus nostrum illum saepe corporis, totam aspernatur
-            ullam commodi repellendus! Voluptatibus molestias, consectetur
-            ipsam, repellat error autem a et tempora dolore iusto consequatur
-            sequi veniam architecto excepturi! Id sapiente eligendi quos quae
-            voluptates repudiandae labore ullam consequatur!
+            Endless functionalities can be achieved with this method. Here are
+            some examples:
           </p>
-          <p>
-            Doloribus illo vitae modi fugit dignissimos repudiandae ex deleniti
-            cupiditate accusamus! Quaerat nesciunt, dolores necessitatibus
-            cumque eos nulla aliquam ex tenetur voluptate possimus fuga culpa
-            officia incidunt maiores exercitationem reprehenderit libero
-            reiciendis optio inventore! Qui nihil earum asperiores illum odit
-            pariatur, velit praesentium? Ea, repellat, distinctio magni aperiam
-            nobis error ipsam alias labore accusantium quis aut, quidem quia
-            officiis. Iusto cupiditate itaque natus ratione incidunt dignissimos
-            ipsa odio a quisquam repudiandae commodi libero quo similique
-            aliquid, magni reprehenderit tempore praesentium dolor veniam.
-            Minima harum dolor eaque nam quas quae unde? Cupiditate at fugiat
-            minima possimus asperiores quo necessitatibus laboriosam nulla!
-          </p>
-          <code></code>
-          <ul class="sections">
-            <li></li>
-            <li></li>
-          </ul>
+          <h2>Sum all the values of an array</h2>
+          <code
+            >let total = [ 0, 1, 2, 3 ].reduce( <br />( previousValue,
+            currentValue ) => previousValue + currentValue, 0 ) <br />
+            // sum is 6
+          </code>
+          <h2>Sum of values in an object array</h2>
+          <code
+            >let initialValue = 0 let sum = [{x: 1}, {x: 2}, {x: 3}].reduce(
+            <br />
+            (previousValue, currentValue) => previousValue + currentValue.x ,
+            initialValue )<br />
+            // sum is 6
+          </code>
+          <h2>Flatten an array of arrays</h2>
+          <code
+            >let flattened = [[0, 1], [2, 3], [4, 5]].reduce( <br />(
+            previousValue, currentValue ) => previousValue.concat(currentValue),
+            [] )
+          </code>
         </section>
-        <section class="main-section" id="titulo5">
-          <header>titulo5</header>
+        <section class="main-section" id="more_information">
+          <header>More information</header>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-            blanditiis ad, odio explicabo voluptate numquam eligendi! Odio
-            molestias atque ut architecto nihil blanditiis, nesciunt nemo nisi
-            deserunt eveniet tempora, nulla sit odit earum labore corrupti?
-            Voluptates atque provident corporis cupiditate, tempora mollitia
-            explicabo deserunt sapiente saepe. Eveniet hic soluta perspiciatis,
-            dicta mollitia vitae aliquid eos molestias corrupti debitis,
-            doloremque consequatur quibusdam quod beatae consectetur similique
-            ducimus incidunt sit sint nam reiciendis illum? Officiis maxime qui
-            placeat animi provident autem esse! Omnis corrupti nesciunt non
-            harum incidunt rerum, dolore quidem. Aspernatur molestiae sed quam,
-            sint minima beatae numquam consequuntur provident perferendis?
+            You can get more information about this many more methods in the
+            <a
+              href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.reduce"
+              target="_blank"
+              >ECMAScript specification</a
+            >.
           </p>
           <p>
-            Atque molestias eius magni neque eos, ipsum tempora quaerat ipsa est
-            obcaecati! Necessitatibus possimus suscipit vero animi commodi
-            earum, perspiciatis eum doloremque facere nulla repellat eveniet
-            voluptate iste. Nobis, possimus molestiae! Nihil excepturi ratione
-            magni praesentium maiores asperiores vitae. Unde vel saepe error
-            natus deserunt, id nemo ex dolor fugiat soluta corrupti at, esse eos
-            totam commodi enim iusto assumenda culpa eligendi! Perferendis harum
-            dicta veniam ab amet ea animi eveniet laborum qui accusantium at
-            nostrum, non aperiam delectus rem aut eum, aliquam distinctio
-            consectetur libero consequatur temporibus maxime maiores voluptatem!
-            Ipsa error fuga laborum sint eos ab illum veniam.
+            You can also consult
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce"
+              ,=""
+              target="_blank"
+              >MDN</a
+            >, from where all the documentation was taken to make this page.
           </p>
-          <code></code>
-          <ul class="sections">
-            <li></li>
-            <li></li>
-          </ul>
         </section>
       </main>
     </div>
