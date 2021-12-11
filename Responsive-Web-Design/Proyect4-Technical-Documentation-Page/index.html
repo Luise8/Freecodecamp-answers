@@ -20,206 +20,189 @@
         </li>
       </ul>
     </nav>
-    <div id="content">
-      <!-- <nav id="navbar">
-        <header>Array.prototype.reduce()</header>
-        <ul>
-          <li><a href="#introduction" class="nav-link">Introduction</a></li>
-          <li><a href="#syntax" class="nav-link">Syntax</a></li>
-          <li><a href="#description" class="nav-link">Description</a></li>
-          <li><a href="#examples" class="nav-link">Examples</a></li>
+    <main id="main-doc">
+      <section class="main-section" id="introduction">
+        <header>Introduction</header>
+        <p>
+          This method is one of the most powerful for arrays. Its magic is so
+          much that it can even replicate to other methods, for example map(),
+          filter(), among others.
+        </p>
+        <p>
+          The reduce() method executes a user-supplied “reducer” callback
+          function on each element of the array, in order, passing in the return
+          value from the calculation on the preceding element. The final result
+          of running the reducer across all elements of the array is a single
+          value.
+        </p>
+        <p>
+          The first time that the callback is run there is no "return value of
+          the previous calculation". If supplied, an initial value may be used
+          in its place. Otherwise array element 0 is used as the initial value
+          and iteration starts from the next element (index 1 instead of index
+          0).
+        </p>
+      </section>
+      <section class="main-section" id="syntax">
+        <header>Syntax</header>
+        <p>
+          This method has two parameters: a callback function (callbackFn) and a
+          initialValue (optional):
+        </p>
+        <p>
+          The <code>callbackFn</code> is a “reducer” function that takes four
+          arguments:
+        </p>
+        <ul class="sections">
           <li>
-            <a href="#more_information" class="nav-link">More information</a>
+            <code>previousValue:</code> the value resulting from the previous
+            call to callbackFn. On first call, initialValue if specified,
+            otherwise the value of array[0].
+          </li>
+          <li>
+            <code>currentValue:</code> the value of the current element. On
+            first call, the value of array[0] if an initialValue was specified,
+            otherwise the value of array[1].
+          </li>
+          <li>
+            <code>currentIndex:</code> the index position of currentValue in the
+            array. On first call, 0 if initialValue was specified, otherwise 1.
+          </li>
+          <li><code>array:</code>the array to traverse.</li>
+        </ul>
+        <p>
+          Also this method can contain an <code>initialValue</code>, an optional
+          value to which previousValue is initialized the first time the
+          callback is called. If initialValue is specified, that also causes
+          currentValue to be initialized to the first value in the array. If
+          initialValue is not specified, previousValue is initialized to the
+          first value in the array, and currentValue is initialized to the
+          second value in the array.
+        </p>
+        <p>
+          The return is the value that results from running the “reducer”
+          callback function to completion over the entire array.
+        </p>
+        <p>The following are the syntaxes that can be adopted:</p>
+        <div class="content-sintax-code">
+          <code
+            >// Arrow function<br />
+            reduce((previousValue, currentValue) => { ... } )<br />
+            reduce((previousValue, currentValue, currentIndex) => { ... } )
+            <br />
+            reduce((previousValue, currentValue, currentIndex, array) => { ... }
+            )<br />
+            reduce((previousValue, currentValue, currentIndex, array) => { ...
+            }, initialValue)</code
+          >
+          <br />
+          <code
+            >// Callback function <br />
+            reduce(callbackFn) <br />
+            reduce(callbackFn, initialValue)</code
+          >
+          <code>
+            <br />
+            // Inline callback function <br />
+            reduce(function(previousValue, currentValue) { ... }) <br />
+            reduce(function(previousValue, currentValue, currentIndex) { ... })
+            <br />
+            reduce(function(previousValue, currentValue, currentIndex, array) {
+            ... }) <br />
+            reduce(function(previousValue, currentValue, currentIndex, array) {
+            ... }, initialValue)</code
+          >
+        </div>
+      </section>
+      <section class="main-section" id="description">
+        <header>Description</header>
+        <p>
+          The ECMAScript specification describes that upon reduce() that the
+          <code>callbackfn</code> should be a function that has four arguments
+          (<a href="#syntax">mentioned in the syntax section</a>) . Reduce calls
+          the callback, as a function, once for each element after the first
+          element present in the array, in ascending order.
+        </p>
+        <p>
+          The first time that callback is called, the previousValue and
+          currentValue can be one of two values:
+        </p>
+        <ul class="sections">
+          <li>
+            If an <code>initialValue</code> was supplied in the call to reduce,
+            then previousValue will be equal to initialValue and currentValue
+            will be equal to the first value in the array.
+          </li>
+          <li>
+            If no <code>initialValue</code> was supplied, then previousValue
+            will be equal to the first value in the array and currentValue will
+            be equal to the second.
           </li>
         </ul>
-      </nav> -->
-
-      <main id="main-doc">
-        <section class="main-section" id="introduction">
-          <header>Introduction</header>
-          <p>
-            This method is one of the most powerful for arrays. Its magic is so
-            much that it can even replicate to other methods, for example map(),
-            filter(), among others.
-          </p>
-          <p>
-            The reduce() method executes a user-supplied “reducer” callback
-            function on each element of the array, in order, passing in the
-            return value from the calculation on the preceding element. The
-            final result of running the reducer across all elements of the array
-            is a single value.
-          </p>
-          <p>
-            The first time that the callback is run there is no "return value of
-            the previous calculation". If supplied, an initial value may be used
-            in its place. Otherwise array element 0 is used as the initial value
-            and iteration starts from the next element (index 1 instead of index
-            0).
-          </p>
-        </section>
-        <section class="main-section" id="syntax">
-          <header>Syntax</header>
-          <p>
-            This method has two parameters: a callback function (callbackFn) and
-            a initialValue (optional):
-          </p>
-          <p>
-            The <code>callbackFn</code> is a “reducer” function that takes four
-            arguments:
-          </p>
-          <ul class="sections">
-            <li>
-              <code>previousValue:</code> the value resulting from the previous
-              call to callbackFn. On first call, initialValue if specified,
-              otherwise the value of array[0].
-            </li>
-            <li>
-              <code>currentValue:</code> the value of the current element. On
-              first call, the value of array[0] if an initialValue was
-              specified, otherwise the value of array[1].
-            </li>
-            <li>
-              <code>currentIndex:</code> the index position of currentValue in
-              the array. On first call, 0 if initialValue was specified,
-              otherwise 1.
-            </li>
-            <li><code>array:</code>the array to traverse.</li>
-          </ul>
-          <p>
-            Also this method can contain an <code>initialValue</code>, an
-            optional value to which previousValue is initialized the first time
-            the callback is called. If initialValue is specified, that also
-            causes currentValue to be initialized to the first value in the
-            array. If initialValue is not specified, previousValue is
-            initialized to the first value in the array, and currentValue is
-            initialized to the second value in the array.
-          </p>
-          <p>
-            The return is the value that results from running the “reducer”
-            callback function to completion over the entire array.
-          </p>
-          <p>The following are the syntaxes that can be adopted:</p>
-          <div class="content-sintax-code">
-            <code
-              >// Arrow function<br />
-              reduce((previousValue, currentValue) => { ... } )<br />
-              reduce((previousValue, currentValue, currentIndex) => { ... } )
-              <br />
-              reduce((previousValue, currentValue, currentIndex, array) => { ...
-              } )<br />
-              reduce((previousValue, currentValue, currentIndex, array) => { ...
-              }, initialValue)</code
-            >
-            <br />
-            <code
-              >// Callback function <br />
-              reduce(callbackFn) <br />
-              reduce(callbackFn, initialValue)</code
-            >
-            <code>
-              <br />
-              // Inline callback function <br />
-              reduce(function(previousValue, currentValue) { ... }) <br />
-              reduce(function(previousValue, currentValue, currentIndex) { ...
-              })
-              <br />
-              reduce(function(previousValue, currentValue, currentIndex, array)
-              { ... }) <br />
-              reduce(function(previousValue, currentValue, currentIndex, array)
-              { ... }, initialValue)</code
-            >
-          </div>
-        </section>
-        <section class="main-section" id="description">
-          <header>Description</header>
-          <p>
-            The ECMAScript specification describes that upon reduce() that the
-            <code>callbackfn</code> should be a function that has four arguments
-            (<a href="#syntax">mentioned in the syntax section</a>) . Reduce
-            calls the callback, as a function, once for each element after the
-            first element present in the array, in ascending order.
-          </p>
-          <p>
-            The first time that callback is called, the previousValue and
-            currentValue can be one of two values:
-          </p>
-          <ul class="sections">
-            <li>
-              If an <code>initialValue</code> was supplied in the call to
-              reduce, then previousValue will be equal to initialValue and
-              currentValue will be equal to the first value in the array.
-            </li>
-            <li>
-              If no <code>initialValue</code> was supplied, then previousValue
-              will be equal to the first value in the array and currentValue
-              will be equal to the second.
-            </li>
-          </ul>
-          <p>
-            It is a TypeError if the array contains no elements and
-            <code>initialValue</code>
-            is not provided.
-          </p>
-          <p>
-            If the array only has one element (regardless of position) and no
-            <code>initialValue</code> is provided, or if
-            <code>initialValue</code> is provided but the array is empty, the
-            solo value will be returned without calling callbackFn.
-          </p>
-          <p>
-            If <code>initialValue</code> is provided and the array is not empty,
-            then the reduce method will always invoke the callback function
-            starting at index 0.
-          </p>
-        </section>
-        <section class="main-section" id="examples">
-          <header>Examples</header>
-          <p>
-            Endless functionalities can be achieved with this method. Here are
-            some examples:
-          </p>
-          <h2>Sum all the values of an array</h2>
-          <code
-            >let total = [ 0, 1, 2, 3 ].reduce( <br />( previousValue,
-            currentValue ) => previousValue + currentValue, 0 ) <br />
-            // sum is 6
-          </code>
-          <h2>Sum of values in an object array</h2>
-          <code
-            >let initialValue = 0 let sum = [{x: 1}, {x: 2}, {x: 3}].reduce(
-            <br />
-            (previousValue, currentValue) => previousValue + currentValue.x ,
-            initialValue )<br />
-            // sum is 6
-          </code>
-          <h2>Flatten an array of arrays</h2>
-          <code
-            >let flattened = [[0, 1], [2, 3], [4, 5]].reduce( <br />(
-            previousValue, currentValue ) => previousValue.concat(currentValue),
-            [] )
-          </code>
-        </section>
-        <section class="main-section" id="more_information">
-          <header>More information</header>
-          <p>
-            You can get more information about this many more methods in the
-            <a
-              href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.reduce"
-              target="_blank"
-              >ECMAScript specification</a
-            >.
-          </p>
-          <p>
-            You can also consult
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce"
-              ,=""
-              target="_blank"
-              >MDN</a
-            >, from where all the documentation was taken to make this page.
-          </p>
-        </section>
-      </main>
-    </div>
+        <p>
+          It is a TypeError if the array contains no elements and
+          <code>initialValue</code>
+          is not provided.
+        </p>
+        <p>
+          If the array only has one element (regardless of position) and no
+          <code>initialValue</code> is provided, or if
+          <code>initialValue</code> is provided but the array is empty, the solo
+          value will be returned without calling callbackFn.
+        </p>
+        <p>
+          If <code>initialValue</code> is provided and the array is not empty,
+          then the reduce method will always invoke the callback function
+          starting at index 0.
+        </p>
+      </section>
+      <section class="main-section" id="examples">
+        <header>Examples</header>
+        <p>
+          Endless functionalities can be achieved with this method. Here are
+          some examples:
+        </p>
+        <h2>Sum all the values of an array</h2>
+        <code
+          >let total = [ 0, 1, 2, 3 ].reduce( <br />( previousValue,
+          currentValue ) => previousValue + currentValue, 0 ) <br />
+          // sum is 6
+        </code>
+        <h2>Sum of values in an object array</h2>
+        <code
+          >let initialValue = 0 let sum = [{x: 1}, {x: 2}, {x: 3}].reduce(
+          <br />
+          (previousValue, currentValue) => previousValue + currentValue.x ,
+          initialValue )<br />
+          // sum is 6
+        </code>
+        <h2>Flatten an array of arrays</h2>
+        <code
+          >let flattened = [[0, 1], [2, 3], [4, 5]].reduce( <br />(
+          previousValue, currentValue ) => previousValue.concat(currentValue),
+          [] )
+        </code>
+      </section>
+      <section class="main-section" id="more_information">
+        <header>More information</header>
+        <p>
+          You can get more information about this many more methods in the
+          <a
+            href="https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.reduce"
+            target="_blank"
+            >ECMAScript specification</a
+          >.
+        </p>
+        <p>
+          You can also consult
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce"
+            ,=""
+            target="_blank"
+            >MDN</a
+          >, from where all the documentation was taken to make this page.
+        </p>
+      </section>
+    </main>
   </body>
 </html>

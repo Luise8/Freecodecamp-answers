@@ -9,14 +9,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-#content {
-  display: flex;
-  gap: 70px;
-  padding: 10px 30px 20px 20px;
-  flex-wrap: nowrap;
-  padding-left: 335px;
-}
-
 #navbar {
   position: fixed;
   width: 300px;
@@ -79,6 +71,10 @@ code,
   flex-direction: column;
   gap: 10px;
   padding: 10px;
+}
+
+#main-doc {
+  padding: 10px 30px 20px 340px;
 }
 
 #examples code {
