@@ -12,9 +12,9 @@ body {
 #content {
   display: flex;
   gap: 70px;
-  padding: 30px;
+  padding: 10px 30px 20px 20px;
   flex-wrap: nowrap;
-  padding-left: 320px;
+  padding-left: 335px;
 }
 
 #navbar {
