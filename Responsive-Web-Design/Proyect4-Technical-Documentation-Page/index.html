@@ -8,8 +8,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <nav id="navbar">
+      <header>Array.prototype.reduce()</header>
+      <ul>
+        <li><a href="#introduction" class="nav-link">Introduction</a></li>
+        <li><a href="#syntax" class="nav-link">Syntax</a></li>
+        <li><a href="#description" class="nav-link">Description</a></li>
+        <li><a href="#examples" class="nav-link">Examples</a></li>
+        <li>
+          <a href="#more_information" class="nav-link">More information</a>
+        </li>
+      </ul>
+    </nav>
     <div id="content">
-      <nav id="navbar">
+      <!-- <nav id="navbar">
         <header>Array.prototype.reduce()</header>
         <ul>
           <li><a href="#introduction" class="nav-link">Introduction</a></li>
@@ -20,14 +32,15 @@
             <a href="#more_information" class="nav-link">More information</a>
           </li>
         </ul>
-      </nav>
+      </nav> -->
+
       <main id="main-doc">
         <section class="main-section" id="introduction">
           <header>Introduction</header>
           <p>
             This method is one of the most powerful for arrays. Its magic is so
             much that it can even replicate to other methods, for example map(),
-            filter()), among others.
+            filter(), among others.
           </p>
           <p>
             The reduce() method executes a user-supplied “reducer” callback
@@ -86,33 +99,36 @@
             callback function to completion over the entire array.
           </p>
           <p>The following are the syntaxes that can be adopted:</p>
-          <code
-            >// Arrow function<br />
-            reduce((previousValue, currentValue) => { ... } )<br />
-            reduce((previousValue, currentValue, currentIndex) => { ... } )
+          <div class="content-sintax-code">
+            <code
+              >// Arrow function<br />
+              reduce((previousValue, currentValue) => { ... } )<br />
+              reduce((previousValue, currentValue, currentIndex) => { ... } )
+              <br />
+              reduce((previousValue, currentValue, currentIndex, array) => { ...
+              } )<br />
+              reduce((previousValue, currentValue, currentIndex, array) => { ...
+              }, initialValue)</code
+            >
             <br />
-            reduce((previousValue, currentValue, currentIndex, array) => { ... }
-            )<br />
-            reduce((previousValue, currentValue, currentIndex, array) => { ...
-            }, initialValue)</code
-          >
-          <br />
-          <code
-            >// Callback function <br />
-            reduce(callbackFn) <br />
-            reduce(callbackFn, initialValue)</code
-          >
-          <code>
-            <br />
-            // Inline callback function <br />
-            reduce(function(previousValue, currentValue) { ... }) <br />
-            reduce(function(previousValue, currentValue, currentIndex) { ... })
-            <br />
-            reduce(function(previousValue, currentValue, currentIndex, array) {
-            ... }) <br />
-            reduce(function(previousValue, currentValue, currentIndex, array) {
-            ... }, initialValue)</code
-          >
+            <code
+              >// Callback function <br />
+              reduce(callbackFn) <br />
+              reduce(callbackFn, initialValue)</code
+            >
+            <code>
+              <br />
+              // Inline callback function <br />
+              reduce(function(previousValue, currentValue) { ... }) <br />
+              reduce(function(previousValue, currentValue, currentIndex) { ...
+              })
+              <br />
+              reduce(function(previousValue, currentValue, currentIndex, array)
+              { ... }) <br />
+              reduce(function(previousValue, currentValue, currentIndex, array)
+              { ... }, initialValue)</code
+            >
+          </div>
         </section>
         <section class="main-section" id="description">
           <header>Description</header>
