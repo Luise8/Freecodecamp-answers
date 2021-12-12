@@ -86,3 +86,23 @@ code,
   margin-left: 25px;
   margin-bottom: 8px;
 }
+
+/*Responsive design for tablets and smartphones*/
+@media (max-width: 768px) {
+  #main-doc {
+    padding-left: 30px;
+  }
+
+  #navbar {
+    position: static;
+    width: 100%;
+    border-right: none;
+    border-bottom: rgba(0, 0, 0, 0.678) solid;
+  }
+
+  #navbar header {
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+  }
+}
