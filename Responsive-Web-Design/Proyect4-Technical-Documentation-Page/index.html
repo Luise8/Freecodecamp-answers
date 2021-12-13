@@ -86,31 +86,80 @@
         <p>The following are the syntaxes that can be adopted:</p>
         <div class="content-sintax-code">
           <code
-            >// Arrow function<br />
-            reduce((previousValue, currentValue) => { ... } )<br />
-            reduce((previousValue, currentValue, currentIndex) => { ... } )
+            ><span class="token comment">// Arrow function</span><br />
+            <span class="token method">reduce</span>((<span
+              class="token parameter"
+              >previousValue</span
+            >, <span class="token parameter">currentValue</span>)
+            <span class="token arrow">=></span> { ... } )<br />
+            <span class="token method">reduce</span>((<span
+              class="token parameter"
+              >previousValue</span
+            >, <span class="token parameter">currentValue</span>,
+            <span class="token parameter">currentIndex</span>)
+            <span class="token arrow">=></span> { ... } )
             <br />
-            reduce((previousValue, currentValue, currentIndex, array) => { ... }
-            )<br />
-            reduce((previousValue, currentValue, currentIndex, array) => { ...
-            }, initialValue)</code
+            <span class="token method">reduce</span>((<span
+              class="token parameter"
+              >previousValue</span
+            >, <span class="token parameter">currentValue</span>,
+            <span class="token parameter">currentIndex</span>,
+            <span class="token parameter">array</span>)
+            <span class="token arrow">=></span> { ... } )<br />
+            <span class="token method">reduce</span>((<span
+              class="token parameter"
+              >previousValue</span
+            >, <span class="token parameter">currentValue</span>,
+            <span class="token parameter">currentIndex</span>,
+            <span class="token parameter">array</span>)
+            <span class="token arrow">=></span> { ... },
+            <span class="token parameter">initialValue</span>)</code
           >
           <br />
           <code
-            >// Callback function <br />
-            reduce(callbackFn) <br />
-            reduce(callbackFn, initialValue)</code
+            ><span class="token comment">// Callback function</span><br />
+            <span class="token method">reduce</span>(<span
+              class="token parameter"
+              >callbackFn</span
+            >) <br />
+            <span class="token method">reduce</span>(<span
+              class="token parameter"
+              >callbackFn</span
+            >, <span class="token parameter">initialValue</span>)</code
           >
           <code>
             <br />
-            // Inline callback function <br />
-            reduce(function(previousValue, currentValue) { ... }) <br />
-            reduce(function(previousValue, currentValue, currentIndex) { ... })
+            <span class="token comment">// Inline callback function</span>
             <br />
-            reduce(function(previousValue, currentValue, currentIndex, array) {
-            ... }) <br />
-            reduce(function(previousValue, currentValue, currentIndex, array) {
-            ... }, initialValue)</code
+            <span><span class="token method">reduce</span></span
+            >(<span class="token function">function</span>(<span
+              class="token parameter"
+              >previousValue</span
+            >, <span class="token parameter">currentValue</span>) { ... })
+            <br />
+            <span class="token method">reduce</span>(<span
+              class="token function"
+              >function</span
+            >(<span class="token parameter">previousValue</span>,
+            <span class="token parameter">currentValue</span>,
+            <span class="token parameter">currentIndex</span>) { ... })
+            <br />
+            <span class="token method">reduce</span>(<span
+              class="token function"
+              >function</span
+            >(<span class="token parameter">previousValue</span>,
+            <span class="token parameter">currentValue</span>,
+            <span class="token parameter">currentIndex</span>,
+            <span class="token parameter">array</span>) { ... })
+            <br />
+            <span class="token method">reduce</span>(<span
+              class="token function"
+              >function</span
+            >(<span class="token parameter">previousValue</span>,
+            <span class="token parameter">currentValue</span>,
+            <span class="token parameter">currentIndex</span>,
+            <span class="token parameter">array</span>) { ... },
+            <span class="token parameter">initialValue</span>)</code
           >
         </div>
       </section>
@@ -119,7 +168,7 @@
         <p>
           The ECMAScript specification describes that upon reduce() that the
           <code>callbackfn</code> should be a function that has four arguments
-          (<a href="#syntax">mentioned in the syntax section</a>) . Reduce calls
+          (<a href="#syntax">mentioned in the syntax section</a>). Reduce calls
           the callback, as a function, once for each element after the first
           element present in the array, in ascending order.
         </p>
@@ -164,23 +213,69 @@
         </p>
         <h2>Sum all the values of an array</h2>
         <code
-          >let total = [ 0, 1, 2, 3 ].reduce( <br />( previousValue,
-          currentValue ) => previousValue + currentValue, 0 ) <br />
-          // sum is 6
+          ><spam class="token declaration">let</spam>
+          <span class="token name">total</span> = [
+          <span class="token value">0</span>,
+          <span class="token value">1</span>,
+          <span class="token value">2</span>,
+          <span class="token value">3</span> ].<span class="token method"
+            >reduce</span
+          >( <br />( <span class="token parameter">previousValue</span>,
+          <span class="token parameter">currentValue</span> )
+          <span class="token arrow">=></span>
+          <span class="token parameter">previousValue</span> +
+          <span class="token parameter">currentValue</span>,
+          <span class="token value">0</span> )
+          <br />
+          <span class="token comment">// sum is 6</span>
         </code>
         <h2>Sum of values in an object array</h2>
         <code
-          >let initialValue = 0 let sum = [{x: 1}, {x: 2}, {x: 3}].reduce(
+          ><spam class="token declaration">let</spam>
+          <span class="token name">initialValue</span> =
+          <span class="token value">0</span>
+          <spam class="token declaration">let</spam>
+          <span class="token name">sum</span> = [{<span class="token parameter"
+            >x</span
+          >: <span class="token value">1</span>}, {<span class="token parameter"
+            >x</span
+          >: <span class="token value">2</span>}, {<span class="token parameter"
+            >x</span
+          >: <span class="token value">3</span>}].<span class="token method"
+            >reduce</span
+          >(
           <br />
-          (previousValue, currentValue) => previousValue + currentValue.x ,
-          initialValue )<br />
-          // sum is 6
+          (<span class="token parameter">previousValue</span>,
+          <span class="token parameter">currentValue</span>)
+          <span class="token arrow">=></span>
+          <span class="token parameter">previousValue</span> +
+          <span class="token parameter">currentValue</span>.<span
+            class="token parameter"
+            >x</span
+          >
+          , <span class="token parameter">initialValue</span> )<br />
+          <span class="token comment">// sum is 6</span>
         </code>
         <h2>Flatten an array of arrays</h2>
         <code
-          >let flattened = [[0, 1], [2, 3], [4, 5]].reduce( <br />(
-          previousValue, currentValue ) => previousValue.concat(currentValue),
-          [] )
+          ><spam class="token declaration">let</spam>
+          <span class="token name">flattened</span> = [[<span
+            class="token value"
+            >0</span
+          >, <span class="token value">1</span>], [<span class="token value"
+            >2</span
+          >, <span class="token value">3</span>], [<span class="token value"
+            >4</span
+          >, <span class="token value">5</span>]].<span class="token method"
+            >reduce</span
+          >( <br />( <span class="token parameter">previousValue</span>,
+          <span class="token parameter">currentValue</span> )
+          <span class="token arrow">=></span>
+          <span class="token parameter">previousValue</span>.<span
+            class="token method"
+            >concat</span
+          >(<span class="token parameter">currentValue</span>), [] ) <br />
+          <span class="token comment">// flattened is [0, 1, 2, 3, 4, 5]</span>
         </code>
       </section>
       <section class="main-section" id="more_information">
