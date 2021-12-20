@@ -4,6 +4,20 @@
   margin: 0;
 }
 
+/* WRAP_CONTENT */
+#wrap_content {
+  overflow: auto;
+  position: absolute;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  width: auto;
+  left: 0;
+  right: 0;
+}
+
+/* END OF WRAP_CONTENT */
+
 /* NAVBAR */
 #navbar {
   position: fixed;
@@ -18,18 +32,6 @@
   transition: 0.5s;
 }
 /* Class to apply color when scroll down from welcome section */
-
-#wrap_content {
-  overflow: auto;
-  position: absolute;
-  height: auto;
-  top: 0;
-  bottom: 0;
-  width: auto;
-  left: 0;
-  right: 0;
-  overflow: auto;
-}
 
 #navbar ul {
   display: flex;
@@ -72,15 +74,16 @@
   flex-direction: column;
 }
 
-.opacity h1 {
+#welcome-section h1 {
   color: white;
   border-left: 2px solid #049dd9;
   border-top: 2px solid #049dd9;
   padding-left: 5px;
   padding-top: 2px;
+  font-size: 5vh;
 }
 
-.opacity h2 {
+#welcome-section h2 {
   color: #049dd9;
   margin-left: 50px;
 }
@@ -111,6 +114,18 @@
 .proyect a {
   display: block;
   height: 100%;
+}
+.img_content {
+  height: 90%;
+  width: 100%;
+  background-color: blueviolet;
+  overflow: hidden;
+}
+
+.img_content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .proyect h2 {
