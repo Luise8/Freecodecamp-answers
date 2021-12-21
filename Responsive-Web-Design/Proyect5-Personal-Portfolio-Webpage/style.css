@@ -4,6 +4,18 @@
   margin: 0;
 }
 
+/* GLOBAL CSS */
+#projects,
+#contact {
+  padding: 20px 10px;
+}
+
+.other_headers {
+  font-size: 2em;
+  margin: 10px 0;
+  text-align: center;
+}
+
 /* WRAP_CONTENT */
 #wrap_content {
   overflow: auto;
@@ -15,7 +27,6 @@
   left: 0;
   right: 0;
 }
-
 /* END OF WRAP_CONTENT */
 
 /* NAVBAR */
@@ -24,6 +35,7 @@
   width: 100%;
   height: 65px;
   transition: 0.5s;
+  z-index: 1000;
 }
 
 /* Class to apply color when scroll down from welcome section */
@@ -56,7 +68,6 @@
 #navbar ul li a:hover {
   background-color: #1c2d8c;
 }
-
 /* END OF NAVBAR */
 
 /* WELCOME SECTION */
@@ -88,7 +99,6 @@
   margin-left: 50px;
   font-size: 1.5em;
 }
-
 /*END OF WELCOME SECTION*/
 
 /* START OF PROYECT SECTION */
@@ -99,7 +109,7 @@
   background-color: #1c2d8c;
 }
 
-.only_proyects_content {
+.content_all_proyects {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
@@ -109,26 +119,44 @@
 .proyect {
   width: 300px;
   height: 300px;
-  background-color: brown;
 }
 
 .proyect a {
   display: block;
+  position: relative;
   height: 100%;
-}
-.img_content {
-  height: 90%;
-  width: 100%;
-  background-color: blueviolet;
   overflow: hidden;
 }
 
-.img_content img {
+.proyect a img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
+  object-position: 50% 0%;
 }
 
-.proyect h2 {
-  text-align: center;
+/* Effect of appearing the text when hovering over the image */
+.img__description_layer {
+  position: absolute;
+  background-color: rgba(36, 62, 206, 0.6);
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s;
 }
+
+.proyect a:hover .img__description_layer {
+  visibility: visible;
+  color: rgb(255, 0, 0);
+  text-align: center;
+  opacity: 1;
+  transition: 0.5s;
+}
+/* Effect of appearing the text when hovering over the image */
+/* END OF PROYECT SECTION */
