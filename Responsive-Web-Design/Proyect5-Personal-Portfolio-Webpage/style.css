@@ -1,3 +1,7 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;1,300&display=swap");
+
 /* REMOVE ALL PADDING AND MARGINS */
 * {
   padding: 0;
@@ -5,13 +9,27 @@
 }
 
 /* GLOBAL CSS */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+}
+
+h1,
+h2 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  font-size: 50px;
+}
+
 #projects,
 #contact {
   padding: 25px 10px 50px 10px;
 }
 
 .other_Heading {
-  font-size: 2em;
   margin: 10px 0;
   text-align: center;
 }
@@ -91,13 +109,13 @@
   border-top: 2px solid #049dd9;
   padding-left: 5px;
   padding-top: 2px;
-  font-size: 2.5em;
+  font-size: 70px;
 }
 
 #welcome-section h2 {
   color: #049dd9;
-  margin-left: 50px;
-  font-size: 1.5em;
+  margin-left: 150px;
+  font-weight: 300;
 }
 /*END OF WELCOME SECTION*/
 
@@ -109,11 +127,16 @@
   background-color: #d9a78b;
 }
 
+#projects h2 {
+  font-size: 2em;
+}
+
 .content_all_proyects {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 15px;
 }
 
 .proyect {
@@ -190,6 +213,7 @@
 #quote q {
   font-style: italic;
   align-self: center;
+  font-weight: 300;
 }
 #archimedes {
   align-self: flex-end;
@@ -221,6 +245,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  font-weight: 400;
 }
 
 footer a {
