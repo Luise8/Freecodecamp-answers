@@ -7,7 +7,7 @@
 /* GLOBAL CSS */
 #projects,
 #contact {
-  padding: 20px 10px;
+  padding: 25px 10px 50px 10px;
 }
 
 .other_Heading {
@@ -106,7 +106,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #1c2d8c;
+  background-color: #d9a78b;
 }
 
 .content_all_proyects {
@@ -117,8 +117,9 @@
 }
 
 .proyect {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 500px;
+  border: 1px solid #03261c;
 }
 
 .proyect a {
@@ -149,6 +150,7 @@
   justify-content: center;
   opacity: 0;
   transition: 0.5s;
+  text-align: center;
 }
 
 .proyect a:hover .img__description_layer {
@@ -160,3 +162,73 @@
 }
 /* Effect of appearing the text when hovering over the image */
 /* END OF PROYECT SECTION */
+
+/* START OF CONTACT SECTION */
+
+#contact {
+  background-color: #d9a78b;
+}
+
+.content1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#information {
+  max-width: 900px;
+  align-self: center;
+  text-align: center;
+}
+#quote {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 507px;
+  margin: 0 auto;
+  border: 1px solid #03261c;
+}
+#quote q {
+  font-style: italic;
+  align-self: center;
+}
+#archimedes {
+  align-self: flex-end;
+  margin-right: 5%;
+}
+
+.content_icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.content_icons a {
+  color: #03261c;
+  transition: 0.5s;
+}
+
+.content_icons a:hover {
+  color: #13dcf2;
+  transition: 0.5s;
+}
+
+.incos {
+  font-size: 30px;
+}
+
+footer {
+  background-color: #05c7f2;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #03261c;
+  transition: 0.5s;
+}
+footer a:hover {
+  color: #0d5673;
+  transition: 0.5s;
+}
