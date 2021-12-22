@@ -27,6 +27,7 @@ h2 {
 #projects,
 #contact {
   padding: 25px 10px 50px 10px;
+  color: #f2f2f2;
 }
 
 .other_Heading {
@@ -58,8 +59,9 @@ h2 {
 
 /* Class to apply color when scroll down from welcome section */
 .navbar_color {
-  background-color: #049dd9;
+  background-color: #5e778c;
   transition: 0.5s;
+  border-bottom: 3px solid #049dd9;
 }
 /* Class to apply color when scroll down from welcome section */
 
@@ -79,7 +81,7 @@ h2 {
   display: flex;
   height: 100%;
   align-items: center;
-  color: white;
+  color: #f2f2f2;
   font-weight: 1000;
 }
 
@@ -104,7 +106,7 @@ h2 {
 }
 
 #welcome-section h1 {
-  color: white;
+  color: #f2f2f2;
   border-left: 2px solid #049dd9;
   border-top: 2px solid #049dd9;
   padding-left: 5px;
@@ -124,11 +126,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #d9a78b;
-}
-
-#projects h2 {
-  font-size: 2em;
+  background-color: #034c8c;
 }
 
 .content_all_proyects {
@@ -142,7 +140,8 @@ h2 {
 .proyect {
   width: 400px;
   height: 500px;
-  border: 1px solid #03261c;
+  border-top: 2px solid #049dd9;
+  border-left: 2px solid #049dd9;
 }
 
 .proyect a {
@@ -159,10 +158,14 @@ h2 {
   object-position: 50% 0%;
 }
 
+.project-tile {
+  font-size: 2em;
+}
+
 /* Effect of appearing the text when hovering over the image */
 .img__description_layer {
   position: absolute;
-  background-color: rgba(36, 62, 206, 0.6);
+  background-color: rgba(2, 48, 89, 0.97);
   visibility: hidden;
   top: 0;
   left: 0;
@@ -178,8 +181,8 @@ h2 {
 
 .proyect a:hover .img__description_layer {
   visibility: visible;
-  color: rgb(255, 0, 0);
   text-align: center;
+  color: #049dd9;
   opacity: 1;
   transition: 0.5s;
 }
@@ -189,7 +192,7 @@ h2 {
 /* START OF CONTACT SECTION */
 
 #contact {
-  background-color: #d9a78b;
+  background-color: #023059;
 }
 
 .content1 {
@@ -208,7 +211,7 @@ h2 {
   width: 100%;
   max-width: 507px;
   margin: 0 auto;
-  border: 1px solid #03261c;
+  border: 1px solid #049dd9;
 }
 #quote q {
   font-style: italic;
@@ -227,12 +230,12 @@ h2 {
 }
 
 .content_icons a {
-  color: #03261c;
+  color: #f2f2f2;
   transition: 0.5s;
 }
 
 .content_icons a:hover {
-  color: #13dcf2;
+  color: #049dd9;
   transition: 0.5s;
 }
 
@@ -241,19 +244,96 @@ h2 {
 }
 
 footer {
-  background-color: #05c7f2;
+  background-color: #023059;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 35px 20px 30px 20px;
   font-weight: 400;
+  border-top: 3px solid #049dd9;
+  color: #f2f2f2;
 }
 
 footer a {
   text-decoration: none;
-  color: #03261c;
+  color: #f2f2f2;
   transition: 0.5s;
 }
 footer a:hover {
-  color: #0d5673;
+  color: #049dd9;
   transition: 0.5s;
+}
+
+/* Tablet and smartphone sreen */
+@media (max-width: 768px) {
+  .proyect a:hover .img__description_layer {
+    visibility: hidden;
+  }
+
+  #welcome-section h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  #welcome-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #welcome-section h1 {
+    font-size: 3em;
+    text-align: center;
+    border-left: none;
+    border-bottom: 2px solid #049dd9;
+    padding-left: 0;
+  }
+
+  #welcome-section h2 {
+    color: #049dd9;
+    margin-left: 0;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  #navbar {
+    height: auto;
+    border-bottom: 3px solid #049dd9;
+  }
+
+  #navbar ul {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  #navbar ul li {
+    list-style-type: none;
+    margin-right: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  /* Class to apply color when scroll down from welcome section */
+  .navbar_color {
+    background-color: #5e778c;
+    transition: 0.5s;
+  }
+  /* Class to apply color when scroll down from welcome section */
+
+  .proyect {
+    width: 90%;
+    height: 100vw;
+  }
 }
