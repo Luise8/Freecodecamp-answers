@@ -76,7 +76,8 @@ h2 {
   margin-right: 30px;
 }
 
-#navbar ul li a {
+#navbar ul li a,
+#navbar ul li a:visited {
   text-decoration: none;
   display: flex;
   height: 100%;
@@ -88,6 +89,17 @@ h2 {
 #navbar ul li a:hover {
   background-color: #1c2d8c;
 }
+
+#proyect_section_link {
+  position: absolute;
+  bottom: 65px;
+}
+
+#contact_section_link {
+  position: absolute;
+  bottom: 65px;
+}
+
 /* END OF NAVBAR */
 
 /* WELCOME SECTION */
@@ -127,6 +139,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   background-color: #034c8c;
+  position: relative;
 }
 
 .content_all_proyects {
@@ -142,6 +155,9 @@ h2 {
   height: 500px;
   border-top: 2px solid #049dd9;
   border-left: 2px solid #049dd9;
+  border-right: 2px solid #023059;
+  border-bottom: 2px solid #023059;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .proyect a {
@@ -185,7 +201,13 @@ h2 {
   color: #049dd9;
   opacity: 1;
   transition: 0.5s;
+  box-shadow: none;
 }
+
+.proyect:hover {
+  box-shadow: none;
+}
+
 /* Effect of appearing the text when hovering over the image */
 /* END OF PROYECT SECTION */
 
@@ -263,10 +285,25 @@ footer a:hover {
   transition: 0.5s;
 }
 
-/* Tablet and smartphone sreen */
+/* Tablet sreen */
 @media (max-width: 768px) {
+  .img__description_layer,
   .proyect a:hover .img__description_layer {
-    visibility: hidden;
+    visibility: visible;
+    top: 70%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    color: #049dd9;
+    opacity: 1;
+  }
+
+  .proyect {
+    border-bottom: 2px solid #049dd9;
+    border-right: 2px solid #049dd9;
+    border-top: 2px solid #023059;
+    border-left: 2px solid #023059;
   }
 
   #welcome-section h1 {
@@ -285,6 +322,7 @@ footer a:hover {
   }
 }
 
+/* Smartphone screen */
 @media (max-width: 425px) {
   #welcome-section {
     padding-left: 10px;
@@ -331,6 +369,15 @@ footer a:hover {
     transition: 0.5s;
   }
   /* Class to apply color when scroll down from welcome section */
+  #proyect_section_link {
+    position: absolute;
+    bottom: 145px;
+  }
+
+  #contact_section_link {
+    position: absolute;
+    bottom: 0;
+  }
 
   .proyect {
     width: 90%;
