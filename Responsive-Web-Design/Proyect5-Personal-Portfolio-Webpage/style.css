@@ -374,12 +374,10 @@ footer a:hover {
   }
   /* Class to apply color when scroll down from welcome section */
   #proyect_section_link {
-    position: absolute;
-    bottom: 70px;
+    bottom: 80px;
   }
 
   #contact_section_link {
-    position: absolute;
     bottom: 0;
   }
 
