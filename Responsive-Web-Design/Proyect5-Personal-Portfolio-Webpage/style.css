@@ -84,6 +84,7 @@ h2 {
   align-items: center;
   color: #f2f2f2;
   font-weight: 1000;
+  background-color: transparent;
 }
 
 #navbar ul li a:hover {
@@ -287,6 +288,10 @@ footer a:hover {
 
 /* Tablet sreen */
 @media (max-width: 768px) {
+  #navbar ul li a:hover {
+    background-color: transparent;
+  }
+
   .img__description_layer,
   .proyect a:hover .img__description_layer {
     visibility: visible;
@@ -357,7 +362,6 @@ footer a:hover {
   }
 
   #navbar ul li {
-    list-style-type: none;
     margin-right: 0;
     margin-bottom: 20px;
     text-transform: uppercase;
