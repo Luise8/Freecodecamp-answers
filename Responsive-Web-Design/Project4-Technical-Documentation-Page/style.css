@@ -1,0 +1,160 @@
+/*Font of page*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+/*general styles*/
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  font-size: 25px;
+  color: rgb(76, 76, 211);
+  margin: 20px 0 5px 0;
+  font-weight: 600;
+}
+
+p {
+  margin: 7px 0;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+code {
+  font-size: 13px;
+  background-color: rgb(241, 241, 241);
+  color: rgba(0, 0, 0, 0.788);
+}
+
+/*navbar style*/
+#navbar {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background-color: rgb(236, 236, 236);
+  border-right: rgba(0, 0, 0, 0.678) solid;
+}
+
+#navbar header {
+  margin-left: 20px;
+}
+
+#navbar ul {
+  list-style-type: none;
+}
+
+#navbar ul li {
+  background-color: #282c34;
+}
+
+#navbar ul li a {
+  display: block;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid rgb(221, 221, 221);
+}
+
+#navbar ul li a:hover {
+  background-color: #469ae9;
+  color: black;
+}
+
+/*div with code in syntax section style*/
+.content-sintax-code {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  background-color: #282c34;
+  font-size: 13px;
+}
+
+.content-sintax-code code {
+  background-color: #282c34;
+  color: #b5b9c0;
+  line-height: 1.5;
+}
+
+/*main style*/
+#main-doc {
+  padding: 10px 30px 20px 340px;
+}
+
+#examples code {
+  display: block;
+  padding: 10px;
+  background-color: #282c34;
+  color: #b5b9c0;
+  line-height: 1.5;
+}
+
+#main-doc li {
+  margin-left: 25px;
+  margin-bottom: 8px;
+}
+
+#main-doc a:link,
+#main-doc a:visited {
+  color: rgb(59, 59, 197);
+}
+
+#main-doc a:hover {
+  color: red;
+  text-decoration: none;
+}
+/*Classes of the different components of the code element (functions, parameter, etc)*/
+.token.comment {
+  color: #797b7d;
+}
+
+.token.comment {
+  font-style: italic;
+}
+
+.token.function,
+.token.declaration,
+.token.arrow {
+  color: #ad75b8;
+}
+
+.token.name,
+.token.parameter {
+  color: #da6a60;
+}
+
+.token.value {
+  color: #d19a66;
+}
+
+.token.method {
+  color: #469ae9;
+}
+
+/*Responsive design for tablets and smartphones*/
+@media (max-width: 768px) {
+  #main-doc {
+    padding-left: 30px;
+  }
+
+  #navbar {
+    position: static;
+    width: 100%;
+    border-right: none;
+    border-bottom: rgba(0, 0, 0, 0.678) solid;
+  }
+
+  #navbar header {
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+  }
+}

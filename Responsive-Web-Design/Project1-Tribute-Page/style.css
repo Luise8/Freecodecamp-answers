@@ -1,0 +1,105 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  background: url(https://i.imgur.com/4umBLQL.jpg);
+}
+
+main {
+  background: white;
+  padding: 1vw;
+  margin: 4vw;
+  border-radius: 0.23%;
+}
+
+#tribute-info {
+padding: 1vw 0.2vw 1vw 2vw;
+margin: 1vw;
+  
+}
+h1 {
+  text-align: center;
+  font-size: 4vw;
+}
+
+
+h1, h2 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+figure {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+#img-caption {
+  text-align: center;
+  max-width: 100%;
+   font-size: 1.5vw;
+
+  
+}
+
+h2 {
+  font-size: 2vw
+}
+
+h3 {
+  font-size: 1.5vw;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+li, p, h3, #img-caption{
+  font-family: 'Barlow', sans-serif;
+}
+
+li, p{
+  font-size: 1.5vw;
+  text-align: justify;
+   margin-right: 2vw;
+}
+li {
+  padding-bottom: 10px;
+}
+
+a:hover {
+  color: green;
+}
+
+@media (max-width: 425px) {
+  li, p, h2, #img-caption, h3 {
+    font-size: 13px;
+  }
+  
+  main {
+  
+  margin: 4vw;
+  border-radius: 0.23%;
+}
+  h2 {
+        text-align: center;
+  }
+  
+  p {
+    margin: 0px 30px 0px 30px;
+  }
+  
+  li {
+    margin-right: 30px;
+  }
+  #awards {
+    margin-top: -20px;
+  }
+  #tribute-info {
+    padding: 0px;
+    margin: 30px 0px 0px 0px;
+  }
+  
+}
