@@ -91,7 +91,7 @@ h2 {
   background-color: #1c2d8c;
 }
 
-#proyect_section_link {
+#project_section_link {
   position: absolute;
   bottom: 65px;
 }
@@ -135,7 +135,7 @@ h2 {
 }
 /*END OF WELCOME SECTION*/
 
-/* START OF PROYECT SECTION */
+/* START OF PROJECT SECTION */
 #projects {
   display: flex;
   flex-direction: column;
@@ -144,7 +144,7 @@ h2 {
   position: relative;
 }
 
-.content_all_proyects {
+.content_all_projects {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
@@ -152,7 +152,7 @@ h2 {
   margin-top: 15px;
 }
 
-.proyect {
+.project {
   width: 400px;
   height: 500px;
   border-top: 2px solid #049dd9;
@@ -162,19 +162,33 @@ h2 {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.proyect a {
+.project a {
   display: block;
   position: relative;
   height: 100%;
   overflow: hidden;
 }
 
-.proyect a img {
+.project a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 50% 0%;
 }
+
+/*Special style*/
+.project a .diferent-style {
+  object-fit: contain;
+  object-position: 	50% 50%;
+}
+
+.project a .project5 {
+  background-color:rgb(38, 38, 38);
+}
+.project a .project6 {
+  background-color:rgb(184, 200, 218);
+}
+/*Special style*/
 
 .project-tile {
   font-size: 2em;
@@ -197,7 +211,7 @@ h2 {
   text-align: center;
 }
 
-.proyect a:hover .img__description_layer {
+.project a:hover .img__description_layer {
   visibility: visible;
   text-align: center;
   color: #049dd9;
@@ -206,12 +220,12 @@ h2 {
   box-shadow: none;
 }
 
-.proyect:hover {
+.project:hover {
   box-shadow: none;
 }
 
 /* Effect of appearing the text when hovering over the image */
-/* END OF PROYECT SECTION */
+/* END OF PROJECT SECTION */
 
 /* START OF CONTACT SECTION */
 
@@ -294,7 +308,7 @@ footer a:hover {
   }
 
   .img__description_layer,
-  .proyect a:hover .img__description_layer {
+  .project a:hover .img__description_layer {
     visibility: visible;
     top: 70%;
     left: 0;
@@ -305,7 +319,7 @@ footer a:hover {
     opacity: 1;
   }
 
-  .proyect {
+  .project {
     border-bottom: 2px solid #049dd9;
     border-right: 2px solid #049dd9;
     border-top: 2px solid #023059;
@@ -355,11 +369,12 @@ footer a:hover {
   }
 
   #navbar ul {
-    display: flex;
+    display: flex
     height: 100%;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 
+20px;
   }
 
   #navbar ul li {
@@ -374,7 +389,7 @@ footer a:hover {
     transition: 0.5s;
   }
   /* Class to apply color when scroll down from welcome section */
-  #proyect_section_link {
+  #project_section_link {
     bottom: 145px;
   }
 
@@ -382,8 +397,9 @@ footer a:hover {
     bottom: 0;
   }
 
-  .proyect {
+  .project {
     width: 90%;
     height: 100vw;
   }
 }
+
