@@ -1,4 +1,4 @@
-function rot13(str) {
+function cipher(str) {
      // First divide the string into an array of characters to be able to modify them.
     // Then charCodeAt () and String.fromCharCode () allow to take the asci code of each character and evaluate if it is a letter and encrypt it, 
    // otherwise it leaves the character intact.
@@ -9,4 +9,4 @@ function rot13(str) {
   .join("");
 }
 
-rot13("SERR PBQR PNZC");
+cipher("SERR PBQR PNZC");
